@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+</head>
+<body>
+    <h2>Result:</h2>
+    {% if result %}
+        <p>{{ result }}</p>
+    {% elif plot_url %}
+        <img src="{{ url_for('static', filename=plot_url.split('/')[-1]) }}" alt="Function Graph">
+    {% endif %}
+    <a href="/">← Go Back</a>
+</body>
+</html>

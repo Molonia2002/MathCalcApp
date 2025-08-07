@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MathCalcApp</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>MathCalcApp</h1>
+    <form method="POST" action="/solve">
+        <label>Expression:</label>
+        <input type="text" name="expression" required>
+        <label>Point (if needed):</label>
+        <input type="text" name="point">
+
+        <button type="submit" name="action" value="limit">Solve Limit</button>
+        <button type="submit" name="action" value="continuity">Check Continuity</button>
+        <button type="submit" name="action" value="function">Evaluate Function</button>
+        <button type="submit" name="action" value="plot">Plot Graph</button>
+    </form>
+</body>
+</html>
